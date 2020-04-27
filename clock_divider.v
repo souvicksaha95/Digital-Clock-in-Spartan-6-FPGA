@@ -8,7 +8,7 @@ module clock_divider(
 	integer counter_value = 0;
 	integer counter_digit = 0;
 	 	
-	 always@ (posedge clk)
+	always@ (posedge clk)					// This clock will drive the four digits of seven segment display.
 		begin
 			if(counter_digit == 5000)
 				begin
@@ -22,7 +22,7 @@ module clock_divider(
 				end
 		end
 		
-	 always@ (posedge clk)
+	always@ (posedge clk)					// This clock will generate the seconds clock. Clock frequency 12MHz.
 		begin
 			if(counter_value == 6000000)
 				begin
