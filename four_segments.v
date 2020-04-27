@@ -76,11 +76,5 @@ module four_segments (segments, p1, clk, dp);
 			7 : segments = 7'b0001111;
 			8 : segments = 7'b0000000;
 			9 : segments = 7'b0000100;
-//			4'ha : segments = 7'b0001000;
-//			4'hb : segments = 7'b0000000;
-//			4'hc : segments = 7'b0110001;
-//			4'hd : segments = 7'b0000001;
-//			4'he : segments = 7'b0110000;
-//			4'hf : segments = 7'b0111000;
 		endcase
 endmodule
