@@ -20,7 +20,7 @@ module four_segments (segments, p1, clk, dp);
 			p1 = 4'b1110;
 		end
 		
-	always @(posedge digit_clk)
+	always @(posedge digit_clk) //digit_clk is used to multiples the led seven segments.
 		begin
 			if (p1 != 4'b0111)
 				p1 = (p1 << 1) | 4'b0001;
@@ -50,7 +50,7 @@ module four_segments (segments, p1, clk, dp);
 			endcase
 		end
 
-	always @(posedge divided_clk)
+	always @(posedge divided_clk) //divided_clk is actually the clock that track the seconds.
 		begin
 			if(seconds <= 58)
 				seconds = seconds + 1;
